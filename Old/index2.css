@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+body{
+    background: linear-gradient(to right, rgb(141, 209, 201), rgb(3, 43, 50));
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    animation: Play 1s ease-in-out;
+}
+
+@keyframes Play {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+#heading{
+    padding: 1.5rem 2rem 0 0;
+    color: #3498db;
+    text-align: left;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 3px;
+    gap: 1rem;
+    padding: 1rem 3rem;
+}
+
+.tasks{
+    list-style-type: none;
+    display : flex;
+    gap: 1rem;
+    flex-direction: column;
+} 
+
+
+ul, li, h1, input{
+    margin:0;
+    padding:0;
+}
+
+li{
+    border: 0.075rem solid lightgrey;
+    background-color: lightgrey;
+    display: flex;
+    padding : .8rem .9rem .8rem .9rem;
+    width: calc(100% - 2rem);
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis;
+    border-radius: .2rem;
+    
+}
+
+.icon1{  /*this is the plus icon */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    border: 0.075rem solid lightgray;
+    /* padding: .5rem .3rem .3rem 1rem; */
+    border-radius: .2rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.icon1:hover {    /*this is the plus icon */
+    background-color:#3498db;
+    color: white;
+  }
+
+.icon2{ /*this is the delete icon */
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.trash:hover .icon2 {
+    opacity: 1;
+  }
+
+.checkbox{
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.trash:hover .checkbox{
+    opacity: 1;
+}
+
+
+
+
+.button1, .button2 {
+    display: flex;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+
+.trash{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.button{
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    border:none;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight:bolder;
+    white-space: nowrap;
+    padding: 0 1rem 0 1rem;
+    text-align: center;
+}
+
+.ClearAll{
+    display:flex;
+    border: none;
+}
+
+.clear{
+    background-color: white;
+    border: none;
+}
+
+.enter{
+    border:none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    width:100%;
+    font-size: medium;
+    caret-color: black;
+    outline: none;
+    padding: 0 0 0 .6rem;
+    border: 0.075rem solid white;
+    transition: border-color 0.3s ease-in-out;
+}
+
+
+.add{
+    /* background-color: red; */
+    padding:0;
+    height:3rem;
+    /* border-color: blue; */
+    
+    /* padding: .15rem .2rem; */
+}
+
+
+  .add {
+    /* border-color: red; */
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .enter:focus {
+    border-color: #3498db;
+}
+
+.checkbox {
+    color : #3498db;
+    font-weight: bold;
+}
+
+#error{
+    color:red;
+    border-color: red;
+    border-radius: red;
+}
